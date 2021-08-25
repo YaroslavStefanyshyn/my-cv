@@ -1,0 +1,24 @@
+.items img {
+    width: 50px;
+    height: 50px;
+}
+
+.tlgrm img {
+    width: 20px;
+    padding-right: 2px;
+}
+
+.tlgrm {
+    padding: 10px;
+}
+
+.writeItems {
+    padding: 20px;
+}
+
+.items {
+    padding-top: 60px;
+    padding-left: 30px;
+    display: grid;
+    grid-template-columns: 6% 6%;
+}

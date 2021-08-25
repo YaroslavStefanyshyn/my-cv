@@ -1,0 +1,9 @@
+.imgMy img {
+    width: 200px;
+    padding: 25px;
+}
+.imgMy {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+

@@ -1,0 +1,21 @@
+.header {
+    grid-area: h;
+    background-color: rgb(245, 232, 255);
+}
+
+.img img {
+    width: 60px;
+    height: 60px;
+    padding: 15px 50px;
+    
+}
+
+.img {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.img h1 {
+    padding-left: 50px;
+    text-shadow:0 0 15px black ;
+}

@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/header/header';
+import Navbar from './components/navbar/navbar';
+import Profile from './components/content/profile/profile';
+import { BrowserRouter, Route } from 'react-router-dom';
+import About from './components/content/about/about';
+import Skills from './components/content/skills/skills';
+import Contacts from './components/content/contacts/contacts';
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="CV-Wrapper">
+        <Header />
+        <Navbar />
+        <div className='Content'>
+          <Route path='/profile' render={() => <Profile
+            state={props.state.profilePage}
+            dispatch={props.dispatch} />} />
+          <Route path='/about' component={About}></Route>
+          <Route path='/skills' component={Skills}></Route>
+          <Route path='/contacts' component={Contacts}></Route>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
